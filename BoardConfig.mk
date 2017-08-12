@@ -74,8 +74,6 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_INFO_FILE := device/huawei/angler/board-info.txt
 TARGET_NO_RPC := true
 
-BOARD_EGL_CFG := device/huawei/angler/egl.cfg
-
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
 # Increase the size if shaders of size greater than 12KB are used.
@@ -86,7 +84,6 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 
-USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_GRALLOC1_ADAPTER := true
@@ -96,8 +93,6 @@ TARGET_USES_HWC2 := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-
-HAVE_ADRENO_SOURCE:= false
 
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
@@ -138,8 +133,6 @@ SELINUX_IGNORE_NEVERALLOWS := true
 SELINUX_IGNORE_NEVERALLOWS_ON_USER := true
 BOARD_SEPOLICY_DIRS += device/huawei/angler/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/huawei/angler/sepolicy/private
-
-TARGET_USES_64_BIT_BINDER := true
 
 TARGET_USES_AOSP := true
 
