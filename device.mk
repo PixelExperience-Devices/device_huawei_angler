@@ -91,10 +91,6 @@ PRODUCT_COPY_FILES += \
     device/huawei/angler/keylayout/qpnp_pon.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/qpnp_pon.kl \
     device/huawei/angler/keylayout/synaptics_dsx.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/synaptics_dsx.idc
 
-# for launcher layout
-#PRODUCT_PACKAGES += \
-#    AnglerLayout
-
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
     fingerprint.angler \
