@@ -190,9 +190,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service
 
 # Light HAL
-PRODUCT_PACKAGES += \
-    lights.angler \
-    android.hardware.light@2.0-impl
+ PRODUCT_PACKAGES += \
+     android.hardware.light@2.0-service.angler
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
