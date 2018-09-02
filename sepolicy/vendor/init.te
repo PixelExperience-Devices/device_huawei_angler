@@ -49,3 +49,7 @@ allow init sysfs_dm:file { open write };
 
 # for bind mount over /apex/com.android.media.swcodec/etc/ld.config.txt
 allow init system_file:file mounton;
+# allow mmcblk0 tune, chmod/chown
+allow init sysfs_tune:file { setattr write };
+# allow hbm chmod/chown
+allow init sysfs_graphics_comp:file { setattr };
