@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter angler, $(TARGET_DEVICE)),)
+ifneq ($(filter angler_4core angler, $(TARGET_DEVICE)),)
 
 LOCAL_PATH:= $(call my-dir)
 
