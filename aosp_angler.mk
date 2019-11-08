@@ -24,10 +24,18 @@ PRODUCT_COPY_FILES := device/huawei/angler/apns-full-conf.xml:system/etc/apns-co
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
+# Inherit aosp's custom configurations
+$(call inherit-product, $(TOPDIR)vendor/aosp/config/common_full_phone.mk)
+TARGET_GAPPS_ARCH := arm64
+CUSTOM_BUILD_TYPE=OFFICIAL
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1440
+
 PRODUCT_NAME := aosp_angler
 PRODUCT_DEVICE := angler
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on angler
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Nexus 6P
 PRODUCT_MANUFACTURER := Huawei
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
@@ -40,3 +48,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     AOSPLinks
+
+# Device Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=angler \
+    PRIVATE_BUILD_DESC="angler-user 8.1.0 OPM3.171019.014 4503998 release-keys"
+
+BUILD_FINGERPRINT := google/angler/angler:8.1.0/OPM3.171019.014/4503998:user/release-keys
