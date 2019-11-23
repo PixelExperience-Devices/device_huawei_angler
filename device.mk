@@ -331,6 +331,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
 
+# Privapp Whitelist
+PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/configs/privapp-permissions-angler.xml:system/etc/permissions/privapp-permissions-angler.xml
+
 # Power HAL
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
