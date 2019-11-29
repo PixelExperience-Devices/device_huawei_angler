@@ -29,12 +29,12 @@
 
 #include <cutils/properties.h>
 
-int sysfs_read(const char *path, char *s, int num_bytes);
-int sysfs_write(const char *path, char *s);
+int sysfs_read(const char* path, char* s, int num_bytes);
+int sysfs_write(const char* path, char* s);
 int get_scaling_governor(char governor[], int size);
-int get_scaling_governor_check_cores(char governor[], int size,int core_num);
+int get_scaling_governor_check_cores(char governor[], int size, int core_num);
 int is_interactive_governor(char*);
-int is_ondemand_governor(char*);
+int is_schedutil_governor(char*);
 
 int perform_hint_action(int hint_id, int resource_values[], int num_resources);
 void undo_hint_action(int hint_id);
