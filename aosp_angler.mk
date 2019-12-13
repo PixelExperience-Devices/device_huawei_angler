@@ -27,7 +27,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit aosp's custom configurations
 $(call inherit-product, $(TOPDIR)vendor/aosp/config/common_full_phone.mk)
 TARGET_GAPPS_ARCH := arm64
-CUSTOM_BUILD_TYPE=OFFICIAL
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
