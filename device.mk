@@ -376,6 +376,9 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS := \
     device/huawei/angler/overlay
 
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.control_privapp_permissions=log
+
 # Mobile Data provision prop
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.prov_mobiledata=false
