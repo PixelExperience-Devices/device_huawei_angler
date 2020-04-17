@@ -129,6 +129,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/huawei/angler-common
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist
 
 SELINUX_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS_ON_USER := true
 BOARD_SEPOLICY_DIRS += device/huawei/angler-common/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/huawei/angler-common/sepolicy/private
 
