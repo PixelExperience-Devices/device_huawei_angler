@@ -25,6 +25,8 @@ allow init sysfs_cpu:file setattr;
 allow init sysfs_thermal:file setattr;
 # enable edl
 allow init sysfs_enable_edl:file rw_file_perms;
+# led
+allow init sysfs_leds:lnk_file read;
 # led_bg
 allow init sysfs_qpnp_26:file setattr;
 allow init sysfs_qpnp_26:lnk_file rw_file_perms;
