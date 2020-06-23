@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
     device/huawei/angler-common/init.angler.usb.rc:root/init.angler.usb.rc \
     device/huawei/angler-common/fstab.angler:root/fstab.angler \
     device/huawei/angler-common/ueventd.angler.rc:root/ueventd.angler.rc \
-    device/huawei/angler-common/init.recovery.angler.rc:root/init.recovery.angler.rc \
+    device/huawei/angler-common/init.recovery.angler.rc:recovery/root/system/etc/init/hw/init.recovery.angler.rc \
     device/huawei/angler-common/init.angler.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.power.sh \
     device/huawei/angler-common/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     device/huawei/angler-common/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
