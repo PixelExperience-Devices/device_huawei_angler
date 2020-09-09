@@ -62,7 +62,7 @@ LOCAL_C_INCLUDES := \
 #HAL 1.0 Include paths
 LOCAL_C_INCLUDES += \
         frameworks/native/include/media/hardware \
-        device/huawei/angler-common/camera/QCamera2/HAL
+        device/huawei/angler/camera/QCamera2/HAL
 
 TARGET_HEADER_LIBRARIES := generated_kernel_headers
 

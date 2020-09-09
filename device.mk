@@ -25,42 +25,43 @@ TARGET_USES_CHINOOK_SENSORHUB := false
 PRODUCT_SHIPPING_API_LEVEL := 23
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/init.angler.usb.rc:root/init.angler.usb.rc \
-    device/huawei/angler-common/fstab.angler:root/fstab.angler \
-    device/huawei/angler-common/ueventd.angler.rc:root/ueventd.angler.rc \
-    device/huawei/angler-common/init.recovery.angler.rc:recovery/root/system/etc/init/hw/init.recovery.angler.rc \
-    device/huawei/angler-common/init.angler.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.power.sh \
-    device/huawei/angler-common/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
-    device/huawei/angler-common/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
-    device/huawei/angler-common/init.qcom.devwait.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devwait.sh \
-    device/huawei/angler-common/init.qcom.devstart.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devstart.sh
+    device/huawei/angler/init.angler.rc:root/init.angler.rc \
+    device/huawei/angler/init.angler.usb.rc:root/init.angler.usb.rc \
+    device/huawei/angler/fstab.angler:root/fstab.angler \
+    device/huawei/angler/ueventd.angler.rc:root/ueventd.angler.rc \
+    device/huawei/angler/init.recovery.angler.rc:root/init.recovery.angler.rc \
+    device/huawei/angler/init.angler.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.power.sh \
+    device/huawei/angler/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
+    device/huawei/angler/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
+    device/huawei/angler/init.qcom.devwait.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devwait.sh \
+    device/huawei/angler/init.qcom.devstart.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devstart.sh
 
 ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/init.angler.sensorhub.rc:root/init.angler.sensorhub.rc
+    device/huawei/angler/init.angler.sensorhub.rc:root/init.angler.sensorhub.rc
 else
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/init.angler.nanohub.rc:root/init.angler.sensorhub.rc
+    device/huawei/angler/init.angler.nanohub.rc:root/init.angler.sensorhub.rc
 endif
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/init.mcfg.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mcfg.sh
+    device/huawei/angler/init.mcfg.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mcfg.sh
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/init.radio.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.radio.sh
+    device/huawei/angler/init.radio.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.radio.sh
 
 # Thermal configuration
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/thermal-engine-angler.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/thermal-engine.conf
+    device/huawei/angler/thermal-engine-angler.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/thermal-engine.conf
 
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_video.xml \
-    device/huawei/angler-common/media_codecs.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs.xml \
-    device/huawei/angler-common/media_codecs_performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_performance.xml \
-    device/huawei/angler-common/media_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles.xml
+    device/huawei/angler/media_codecs.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs.xml \
+    device/huawei/angler/media_codecs_performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_performance.xml \
+    device/huawei/angler/media_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles.xml
 
 # APEX
 PRODUCT_COPY_FILES += \
@@ -68,16 +69,16 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/aanc_tuning_mixer.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/aanc_tuning_mixer.txt \
-    device/huawei/angler-common/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
-    device/huawei/angler-common/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    device/huawei/angler-common/mixer_paths.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/mixer_paths.xml \
-    device/huawei/angler-common/audio_platform_info_i2s.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_platform_info_i2s.xml \
-    device/huawei/angler-common/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sound_trigger_mixer_paths.xml \
-    device/huawei/angler-common/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sound_trigger_platform_info.xml \
-    device/huawei/angler-common/audio_platform_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_platform_info.xml \
-    device/huawei/angler-common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_configuration.xml \
-    device/huawei/angler-common/audio_policy_volumes_drc.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_volumes_drc.xml \
+    device/huawei/angler/aanc_tuning_mixer.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/aanc_tuning_mixer.txt \
+    device/huawei/angler/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
+    device/huawei/angler/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    device/huawei/angler/mixer_paths.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/mixer_paths.xml \
+    device/huawei/angler/audio_platform_info_i2s.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_platform_info_i2s.xml \
+    device/huawei/angler/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sound_trigger_mixer_paths.xml \
+    device/huawei/angler/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sound_trigger_platform_info.xml \
+    device/huawei/angler/audio_platform_info.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_platform_info.xml \
+    device/huawei/angler/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_configuration.xml \
+    device/huawei/angler/audio_policy_volumes_drc.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_policy_volumes_drc.xml \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/usb_audio_policy_configuration.xml \
@@ -85,9 +86,9 @@ PRODUCT_COPY_FILES += \
 
 # Input device files
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl \
-    device/huawei/angler-common/qpnp_pon.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/qpnp_pon.kl \
-    device/huawei/angler-common/synaptics_dsx.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/synaptics_dsx.idc
+    device/huawei/angler/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl \
+    device/huawei/angler/qpnp_pon.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/qpnp_pon.kl \
+    device/huawei/angler/synaptics_dsx.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/synaptics_dsx.idc
 
 # for launcher layout
 #PRODUCT_PACKAGES += \
@@ -109,15 +110,15 @@ PRODUCT_OEM_PROPERTIES := \
     oem.*
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+    device/huawei/angler/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/bcmdhd.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd.cal \
-    device/huawei/angler-common/bcmdhd-pme.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-pme.cal \
-    device/huawei/angler-common/bcmdhd-high.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-high.cal \
-    device/huawei/angler-common/bcmdhd-low.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-low.cal \
-    device/huawei/angler-common/filter_ie:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/filter_ie
+    device/huawei/angler/bcmdhd.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd.cal \
+    device/huawei/angler/bcmdhd-pme.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-pme.cal \
+    device/huawei/angler/bcmdhd-high.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-high.cal \
+    device/huawei/angler/bcmdhd-low.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-low.cal \
+    device/huawei/angler/filter_ie:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/filter_ie
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -159,15 +160,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.vulkan.version.xml
 
-$(call inherit-product, device/huawei/angler-common/utils.mk)
+$(call inherit-product, device/huawei/angler/utils.mk)
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+    device/huawei/angler/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
 # Qseecomd configuration file
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/init.angler.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.qseecomd.sh
+    device/huawei/angler/init.angler.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.qseecomd.sh
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -365,11 +366,11 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
-    device/huawei/angler-common/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp.conf
+    device/huawei/angler/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+    device/huawei/angler/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp.conf
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/huawei/angler-common/overlay
+    device/huawei/angler/overlay
 
 # Mobile Data provision prop
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -393,7 +394,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Write Manufacturer & Model information in created media files.
 # IMPORTANT: ONLY SET THIS PROPERTY TO TRUE FOR PUBLIC DEVICES
-ifneq ($(filter statix_angler% statix_angler_4core%, $(TARGET_PRODUCT)),)
+ifneq ($(filter aosp_angler% statix_angler%, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     media.recorder.show_manufacturer_and_model=true
 else
@@ -548,14 +549,14 @@ PRODUCT_PACKAGES += \
 endif # aosp_angler
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/init.angler.diag.rc.userdebug:root/init.angler.diag.rc
+    device/huawei/angler/init.angler.diag.rc.userdebug:root/init.angler.diag.rc
 
 # subsystem ramdump collection
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.enable_ramdumps=0
 else # userdebug eng
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/init.angler.diag.rc.user:root/init.angler.diag.rc
+    device/huawei/angler/init.angler.diag.rc.user:root/init.angler.diag.rc
 endif # userdebug eng
 
 # Incoming number (b/23529711)
@@ -593,7 +594,7 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4358
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/huawei/angler-common/gps.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.conf:qcom
+    device/huawei/angler/gps.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.conf:qcom
 
 # services for encryption
 PRODUCT_PACKAGES += \

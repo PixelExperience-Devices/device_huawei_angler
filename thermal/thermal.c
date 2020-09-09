@@ -46,7 +46,7 @@ const int CPU_SENSORS[] = {8, 9, 10, 11, 14, 15, 16, 7};
 //qcom, limit-temp
 #define CPU_THROTTLING_THRESHOLD      60
 #define BATTERY_SHUTDOWN_THRESHOLD    60
-// device/huawei/angler-common/thermal-engine-angler.conf
+// device/huawei/angler/thermal-engine-angler.conf
 #define SKIN_THROTTLING_THRESHOLD     41
 #define SKIN_SHUTDOWN_THRESHOLD       64
 #define VR_THROTTLED_BELOW_MIN        47
