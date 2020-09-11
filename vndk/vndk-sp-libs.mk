@@ -19,8 +19,6 @@ VNDK_SP_LIBRARIES := \
     libhardware \
     libhidlbase \
     libhidlmemory \
-    libhidltransport \
-    libhwbinder \
     libion \
     liblzma \
     libpng \
