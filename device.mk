@@ -139,6 +139,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcutils_shim
 
+# libprotobuf
+PRODUCT_PACKAGES += \
+    libprotobuf_shim
+
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_audio.xml \
