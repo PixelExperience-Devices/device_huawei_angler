@@ -127,7 +127,7 @@
 /sys/module/bcmdhd/parameters/nvram_path u:object_r:sysfs_wlan_fwpath:s0
 
 # wifi mac address
-/sys/devices/virtual/net/wlan0/address                   u:object_r:sysfs_mac_address:s0
+#/sys/devices/virtual/net/wlan0/address                   u:object_r:sysfs_mac_address:s0
 
 # System files
 /vendor/bin/ATFWD-daemon                 u:object_r:atfwd_exec:s0
