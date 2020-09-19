@@ -541,6 +541,7 @@ PRODUCT_PACKAGES += \
 
 # For data
 PRODUCT_PACKAGES += \
+   libaudioclient_shim \
    librmnetctl
 
 # limit dex2oat threads to improve thermals
