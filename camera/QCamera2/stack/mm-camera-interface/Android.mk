@@ -25,11 +25,6 @@ ifneq (,$(filter msm8974 msm8916 msm8226 msm8610 msm8916 apq8084 msm8084 msm8994
 endif
 
 LOCAL_CFLAGS += -D_ANDROID_
-LOCAL_COPY_HEADERS_TO := mm-camera-interface
-LOCAL_COPY_HEADERS += ../common/cam_intf.h
-LOCAL_COPY_HEADERS += ../common/cam_types.h
-LOCAL_COPY_HEADERS += ../common/cam_cond.h
-LOCAL_COPY_HEADERS += ../common/cam_semaphore.h
 
 LOCAL_C_INCLUDES := \
     $(LOCAL_PATH)/inc \
@@ -54,6 +49,7 @@ LOCAL_SRC_FILES := $(MM_CAM_FILES)
 LOCAL_MODULE           := libmmcamera_interface
 LOCAL_PRELINK_MODULE   := false
 LOCAL_SHARED_LIBRARIES := libdl libcutils liblog
+LOCAL_HEADER_LIBRARIES += camera_common_headers
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
