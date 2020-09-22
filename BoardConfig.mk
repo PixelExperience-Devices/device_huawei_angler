@@ -182,6 +182,8 @@ BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/angler-setup.sh
 TARGET_FS_CONFIG_GEN += device/huawei/angler/config.fs
 
 DEVICE_MANIFEST_FILE := device/huawei/angler/manifest.xml
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
 DEVICE_MATRIX_FILE := device/huawei/angler/compatibility_matrix.xml
 
 # Enable workaround for slow rom flash
