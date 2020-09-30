@@ -128,7 +128,7 @@ TARGET_USES_MKE2FS := true
 
 TARGET_AUX_OS_VARIANT_LIST := angler
 
-TARGET_RECOVERY_FSTAB = device/huawei/angler/recovery.fstab
+TARGET_RECOVERY_FSTAB = device/huawei/angler/rootdir/etc/recovery.fstab
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_RELEASETOOLS_EXTENSIONS := device/huawei/angler
 
