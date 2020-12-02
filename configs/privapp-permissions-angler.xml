@@ -45,6 +45,14 @@
         <permission name="android.permission.MANAGE_SUBSCRIPTION_PLANS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.google.android.carriersetup">
+        <permission name="android.permission.CONNECTIVITY_INTERNAL"/>
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.WRITE_APN_SETTINGS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+  
     <privapp-permissions package="com.android.hotwordenrollment.okgoogle">
         <permission name="android.permission.MANAGE_VOICE_KEYPHRASES"/>
     </privapp-permissions>
