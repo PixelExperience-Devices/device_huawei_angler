@@ -64,7 +64,8 @@ LOCAL_C_INCLUDES += \
         frameworks/native/include/media/hardware \
         device/huawei/angler/camera/QCamera2/HAL
 
-TARGET_HEADER_LIBRARIES := generated_kernel_headers
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 #LOCAL_STATIC_LIBRARIES := libqcamera2_util
 LOCAL_C_INCLUDES += \
