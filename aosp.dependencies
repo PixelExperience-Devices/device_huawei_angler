@@ -6,25 +6,13 @@
    {
       "repository":"vendor_huawei_angler",
       "target_path":"vendor/huawei/angler",
-      "branch":"ten",
+      "branch":"eleven",
       "remote": "pixel-devices-blobs"
    },
    {
       "repository": "LineageOS/android_hardware_sony_timekeep",
       "target_path": "hardware/sony/timekeep",
-      "branch": "lineage-17.1",
+      "branch": "lineage-18.0",
       "remote": "github"
-   },
-   {
-      "repository":"packages_apps_PixelLiveWallpaper",
-      "target_path":"packages/apps/PixelLiveWallpaper",
-      "branch":"ten",
-      "remote":"pixel-gitlab"
-   },
-   {
-      "repository":"PixelBoot/packages_apps_GoogleCamera_angler",
-      "target_path":"packages/apps/GoogleCamera",
-      "branch":"ten",
-      "remote":"gitlab"
    }
 ]
