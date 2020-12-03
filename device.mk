@@ -93,8 +93,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint Sensor
 PRODUCT_PACKAGES += \
-    fingerprint.angler \
-    android.hardware.biometrics.fingerprint@2.1-service
+    fingerprint.angler
 
 # Delegation for OEM customization
 PRODUCT_OEM_PROPERTIES := \
@@ -182,26 +181,9 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_PACKAGES += \
     gralloc.msm8994 \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.graphics.mapper@2.0-service \
     hwcomposer.msm8994 \
     libgenlock \
     memtrack.msm8994 \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
-
-# Light HAL
- PRODUCT_PACKAGES += \
-     android.hardware.light@2.0-service.angler
-
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
 
 USE_XML_AUDIO_POLICY_CONF := 1
 PRODUCT_PACKAGES += \
@@ -228,17 +210,8 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libOmxVenc
 
-PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.soundtrigger@2.0-impl
-
 #CAMERA
 PRODUCT_PACKAGES += \
-    camera.device@3.2-impl \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
     camera.msm8994 \
     libcamera \
     libmmcamera_interface \
@@ -254,9 +227,8 @@ PRODUCT_PACKAGES += \
     liblocation_api \
     gps.msm8994
 
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.composer@2.1-service
+# HIDL
+$(call inherit-product, $(LOCAL_PATH)/hidl.mk)
 
 # libcutils
 PRODUCT_PACKAGES += \
@@ -271,15 +243,7 @@ NANOHUB_SENSORHAL_DIRECT_REPORT_ENABLED := true
 
 PRODUCT_PACKAGES += \
     sensors.angler \
-    activity_recognition.angler \
-    android.hardware.sensors@1.0-impl \
-    android.hardware.contexthub@1.0-impl.nanohub \
-    android.hardware.contexthub@1.0-service
-
-# new gatekeeper HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    activity_recognition.angler
 
 ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_PACKAGES += \
@@ -302,7 +266,6 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
     libwpa_client \
     hostapd \
     wlutil \
@@ -313,55 +276,27 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
-    libbt-vendor \
-    android.hardware.bluetooth@1.0-impl
+    libbt-vendor
 
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
-    Tag \
-    android.hardware.nfc@1.1-service
-
-# Keymaster HAL
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
+    Tag
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/configs/privapp-permissions-angler.xml:system/etc/permissions/privapp-permissions-angler.xml
 
-# Power HAL
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
-
-# Thermal HAL
-PRODUCT_PACKAGES += \
-    thermal.angler \
-    android.hardware.thermal@2.0-service.mock
-
-#GNSS HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
-    android.hardware.gnss@1.0-service
-
-# Health HAL
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-service.angler
-	
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
-#USB HAL
+# VNDK-SP
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    vndk-sp
+
 # Library used for VTS tests  (only for userdebug and eng builds)
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 # For VTS profiling.
