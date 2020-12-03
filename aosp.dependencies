@@ -10,6 +10,12 @@
       "remote": "pixel-devices-blobs"
    },
    {
+      "repository":"arter97/arm64-gcc",
+      "target_path":"prebuilts/gcc/linux-x86/arm64-gcc",
+      "branch":"master",
+      "remote": "github"
+   },
+   {
       "repository": "LineageOS/android_hardware_sony_timekeep",
       "target_path": "hardware/sony/timekeep",
       "branch": "lineage-18.0",
