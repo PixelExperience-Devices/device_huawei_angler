@@ -331,10 +331,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc.0/f9824900.sdhci/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
 
-# VNDK-SP
-PRODUCT_PACKAGES += \
-    vndk-sp
-
 # VTS Tests
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 # For VTS profiling.
