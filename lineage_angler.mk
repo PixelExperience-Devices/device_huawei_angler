@@ -27,9 +27,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit some common PixelExperience stuff
 TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, $(TOPDIR)vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, $(TOPDIR)vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_angler
+PRODUCT_NAME := lineage_angler
 PRODUCT_DEVICE := angler
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6P

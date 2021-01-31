@@ -251,7 +251,7 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app
 
 # GoogleCamera
-$(call inherit-product, packages/apps/GoogleCamera/gcam.mk)
+
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -401,7 +401,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Write Manufacturer & Model information in created media files.
 # IMPORTANT: ONLY SET THIS PROPERTY TO TRUE FOR PUBLIC DEVICES
-ifneq ($(filter aosp_angler% angler%, $(TARGET_PRODUCT)),)
+ifneq ($(filter lineage_angler% angler%, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     media.recorder.show_manufacturer_and_model=true
 else
@@ -450,7 +450,7 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext
+   
 
 # LTE, CDMA, GSM/WCDMA
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -550,7 +550,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Modem debugger
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-ifeq (,$(filter aosp_angler, $(TARGET_PRODUCT)))
+ifeq (,$(filter lineage_angler, $(TARGET_PRODUCT)))
 PRODUCT_PACKAGES += \
     NexusLogger
 endif # aosp_angler
